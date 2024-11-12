@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад використання функції як змінної</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    function compare(a, b) {
+        if (a > b) return `${a} більше ніж ${b}`;
+        else return `${a} не більше ніж ${b}`;
+    }
+    let c = compare(15,10);
+    document.write("<p>Результат виклику функції compare як змінної:<br>" + c + "</p>");
+</script>
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+</body>
+</html>

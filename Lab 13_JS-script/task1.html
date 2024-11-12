@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Дні тижня</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="display"></div> <!-- Додано елемент для відображення днів -->
+
+<script>
+    "use strict";
+    function displayDay(size, dayOffset, color) {
+        const today = new Date();
+        const dayDate = new Date(today);
+        dayDate.setDate(today.getDate() + dayOffset);
+
+
+        const dayName = dayDate.toLocaleDateString('uk-UA', { weekday: 'long' });
+
+
+        document.getElementById('display').innerHTML +=
+            `<p style="font-size: ${size}px; color: ${color};">${dayName}</p>`;
+    }
+
+
+    displayDay(100, 0, 'red');    // Сьогодні
+    displayDay(80, 1, 'blue');   // Завтра
+    displayDay(70, 2, 'green');  // Післязавтра
+    displayDay(53, 3, 'purple'); // Через три дні
+    displayDay(42, 4, 'orange'); // Через чотири дні
+    displayDay(28, 5, 'black');  // Через п'ять днів
+    displayDay(24, 6, 'brown');  // Через шість днів
+</script>
+
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+
+</body>
+</html>

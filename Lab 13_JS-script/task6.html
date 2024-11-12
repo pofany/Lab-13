@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Функція у функції</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+  function fun(x) {
+    return x * 2;
+  }
+
+  function res(x, k) {
+    return k(x) / 2;
+  }
+
+  document.write("Відповідь: ", res(4, fun), '<br>');
+</script>
+<div class="center">
+  <ul class="list">
+    <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+  </ul>
+</div>
+</body>
+</html>

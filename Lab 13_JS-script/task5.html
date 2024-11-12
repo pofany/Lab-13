@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Параметри за замовченням</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    "use strict";
+    function printText(txt, color = 'green') {
+        document.write(`<div style="color:${color}">${txt}</div>`);
+    }
+    printText("<p>Червоний колір", 'red');
+    printText("<p>Колір за замовченням зелений");
+    printText("<p>А тут вже чорний", 'black');
+
+</script>
+
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+
+</body>
+</html>

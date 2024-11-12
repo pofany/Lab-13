@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Підрахунок до певної дати</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    "use strict";
+    const day = 86400000;
+    const hour = 3600000;
+    const minute = 60000;
+    const second = 1000; // виправлена кількість мілісекунд в одній секунді
+
+    let today = new Date();
+    let futureDate = new Date(today.getFullYear(), 10, 20); // Дата 20 листопада поточного року
+
+    // Якщо 20 листопада вже пройшло, змінюємо на наступний рік
+    if (today > futureDate) {
+        futureDate.setFullYear(today.getFullYear() + 1);
+    }
+
+    let timeDifference = futureDate - today;
+
+    let days = Math.floor(timeDifference / day);
+    let hours = Math.floor((timeDifference - days * day) / hour);
+    let minutes = Math.floor((timeDifference - days * day - hours * hour) / minute);
+    let seconds = Math.floor((timeDifference - days * day - hours * hour - minutes * minute) / second);
+
+    // Формуємо рядок для виведення результату
+    let resultStr = `${days} днів, ${hours} годин, ${minutes} хвилин, ${seconds} секунд`;
+
+    alert("До 20 листопада залишилося " + resultStr);
+</script>
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+</body>
+</html>

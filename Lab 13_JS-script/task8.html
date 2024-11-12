@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Використання масиву</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    function array(x) {
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        try {
+            if (x < 0 || x > 9) {
+                document.write("Введено некоректне число, х має бути в межах [1;10]");
+            } else if (isNaN(x)) {
+                document.write("Введіть числове значення для x у межах [1;10]");
+            } else {
+                // Виводимо елементи масиву до індексу x
+                for (let i = 0; i <= x - 1; i++) {
+                    document.write(arr[i] + '\t');
+                }
+            }
+        } catch (e) {
+            document.write("Виникла помилка: " + e.message);
+        }
+    }
+    document.write("Вивід масиву:" + '<br>');
+    array(4);
+</script>
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+</body>
+</html>
